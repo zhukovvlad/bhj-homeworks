@@ -1,3 +1,5 @@
+'use strict';
+
 let dropDown = document.getElementsByClassName('dropdown__list')[0];
 let btn = document.getElementsByClassName('dropdown__value')[0];
 

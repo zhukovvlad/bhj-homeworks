@@ -1,3 +1,5 @@
+'use strict';
+
 let tabList = document.querySelectorAll('div.tab');
 let tabContent = document.querySelectorAll('div.tab__content');
 
