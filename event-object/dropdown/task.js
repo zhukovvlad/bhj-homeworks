@@ -12,6 +12,7 @@ btn.addEventListener('click', function() {
 for (let index=0; index < elem.length; index++) {
     elem[index].addEventListener('click', function(event) {
         btn.textContent = elem[index].textContent;
+        dropDown.classList.toggle('dropdown__list_active');
         event.preventDefault();
     });
 }
