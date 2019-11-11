@@ -72,7 +72,6 @@ class Autocomplete {
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
       Метод должен вернуть массив.
-
       Он формируется на основе списка опций select-элемента (this.input)
       Подходящие опции - те, чей текст содержит то, что есть в аргументе text
       Необходимо вернуть массив объектов со свойствами:
@@ -80,14 +79,22 @@ class Autocomplete {
         text: 'Содержимое <option>',
         value: 'Содержимое атрибута value'
       }
-    */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
+      */
+    const options = this.input.options;
+    let match = [];
+    
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].text.includes(text)) {
+        match.push({
+          text: options[i].text,
+          value: options[i].value
+        })
       }
-    ];
+    }
+    
+    return match;
   }
 }
 
-new Autocomplete( document.querySelector( '.autocomplete' ));
+let test = new Autocomplete( document.querySelector( '.autocomplete' ));
+console.log(test.input.options);

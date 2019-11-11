@@ -31,18 +31,9 @@ function randomInteger(min, max) {
             ${answerList[randomInteger(0, answerList.length-1)]}
           </div>
         </div>`
+      chatInput.value='';
     }
 
     const messageContainer = document.querySelector('.chat-widget__messages-container');
-    console.log(messageContainer);
-    //console.log(messageContainer[0].hasChildNodes);
-    const allMessages = document.querySelectorAll('.message');
-    console.log(allMessages);
-    const lastMessage = messageContainer.lastChild;
-    console.log(lastMessage);
-    //console.log(lastMessage.getBoundingClientRect().bottom);
-    //lastMessage.getBoundingClientRect.top = 200;
     messageContainer.scrollTo(0, 9999);
-    console.log('Top: ', messageContainer.getBoundingClientRect().top);
-    console.log('Bottom: ', messageContainer.getBoundingClientRect().bottom);
   })
